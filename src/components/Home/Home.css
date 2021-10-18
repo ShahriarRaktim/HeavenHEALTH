@@ -1,0 +1,44 @@
+.banar{
+    background-image: url("https://image.freepik.com/free-vector/website-banner-design-with-glossy-molecules-health-medical-concept_1302-5664.jpg");
+    /* background-image: url("../../image/banar.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5% 50% 5% 10%;
+}
+.banar span {
+    color: rgb(42, 162, 218);
+    font-size: 72px;
+}
+.banar h1{
+    font-size: 60px;
+    font-weight: 900;
+    color: rgb(10, 10, 70);
+    padding-bottom: 20px;
+}
+.click{
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    padding: 5px 15px;
+    background-color: rgb(10, 10, 70);
+    border-radius: 20px;
+}
+
+
+@media only screen and (max-width: 679px) {
+    .banar{
+        padding: 5% 25% 5% 10%;
+    }
+    .banar h1{
+        font-size: 20px;
+        font-weight: 900;
+    }
+    .banar span {
+        color: rgb(42, 162, 218);
+        font-size: 32px;
+    }  
+    .click{
+        font-size: 12px;
+    }
+}

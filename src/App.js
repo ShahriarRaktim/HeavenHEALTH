@@ -1,23 +1,59 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Home from './components/Home/Home';
+import Header from './components/Header/Header';
+import Notfound from './components/Notfound/Notfound';
+import Services from './components/Services/Services';
+import Login from './components/Login/Login';
+import Logout from './components/Logout/Logout';
+import Service from './components/Service/Service';
+import Contact from './components/Contact/Contact';
+import Appointment from './components/Appointment/Appointment';
+import Help from './components/Help/Help';
+import Ourdoctors from './components/Ourdoctors/Ourdoctors';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+            <Header></Header>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <Route path="/home">
+            <Home></Home>
+          </Route>
+          <Route path="/services">
+            <Services></Services>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+          <Route path="/logout">
+            <Logout></Logout>
+          </Route>
+          <Route path="/service">
+            <Service></Service>
+          </Route>
+          <Route path="/appoinment">
+            <Appointment></Appointment>
+          </Route>
+          <Route path="/help">
+            <Help></Help>
+          </Route>
+          <Route path="/ourdoctors">
+            <Ourdoctors></Ourdoctors>
+          </Route>
+          <Route path="/contact">
+            <Contact></Contact>
+          </Route>
+          <Route path="*">
+            <Notfound></Notfound>
+          </Route>
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 }
