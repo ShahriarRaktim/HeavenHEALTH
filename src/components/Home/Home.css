@@ -84,7 +84,20 @@
     padding: 0 25%;
     color: rgba(47, 47, 75, 0.712);
 }
-
+.name{
+    font-size: 28px;
+    font-weight: 700;
+    color: rgb(9, 9, 82);
+}
+.card{
+    border: none;
+    border-radius: 20px;
+    box-shadow: 10px 10px 20px rgba(80, 148, 180, 0.685) ;
+}
+.card:hover{
+    background-color: rgba(111, 206, 250, 0.829);
+    cursor: zoom-out;
+}
 
 @media only screen and (max-width: 679px) {
     .banar{
