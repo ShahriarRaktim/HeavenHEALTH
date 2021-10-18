@@ -12,10 +12,13 @@ import Contact from './components/Contact/Contact';
 import Appointment from './components/Appointment/Appointment';
 import Help from './components/Help/Help';
 import Ourdoctors from './components/Ourdoctors/Ourdoctors';
+import AuthProvider from './Context/AuthProvider';
+import Register from './components/Register/Register';
 
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
       <BrowserRouter>
             <Header></Header>
         <Switch>
@@ -49,11 +52,16 @@ function App() {
           <Route path="/contact">
             <Contact></Contact>
           </Route>
+          <Route path="/register">
+            <Register></Register>
+          </Route>
           <Route path="*">
             <Notfound></Notfound>
           </Route>
         </Switch>
       </BrowserRouter>
+      </AuthProvider>
+      
     </div>
   );
 }
