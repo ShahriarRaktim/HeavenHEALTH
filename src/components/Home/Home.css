@@ -24,6 +24,36 @@
     background-color: rgb(10, 10, 70);
     border-radius: 20px;
 }
+.doc-team{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.doc-team img{
+    width: 100%;
+}
+.information{
+    text-align: start;
+    padding: 10%;
+}
+.info {
+    display: flex;
+}
+.information h1{
+    color: turquoise;
+    font-size: 20px;
+    font-weight: 600;
+}
+.information h2{
+    font-size: 32px;
+    font-weight: 800;
+}
+.information h3{
+    color: turquoise;
+    padding-right: 5%;
+}
+.information h4{
+    color: rgb(14, 14, 87);
+}
 
 
 @media only screen and (max-width: 679px) {
@@ -40,5 +70,8 @@
     }  
     .click{
         font-size: 12px;
+    }
+    .doc-team{
+        display: block;
     }
 }
