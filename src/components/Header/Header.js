@@ -43,7 +43,9 @@ const Header = () => {
               {user.email ? (
                 <>
                   <Nav.Link href="#user" className="text-info">
-                    {user.displayName}
+                      {
+                        user.displayName || user.email
+                      }
                   </Nav.Link>
                   <Nav.Link
                     as={NavLink}

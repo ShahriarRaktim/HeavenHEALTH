@@ -23,7 +23,7 @@ const Login = () => {
         history.push(from)
         
       })
-      .finaly(()=>setIsloading(false))
+      .finally(()=>setIsloading(false))
       
       e.preventDefault();
     }
@@ -34,7 +34,7 @@ const Login = () => {
           history.push(from)
           setIsloading(false)
         })
-        .finaly(()=>setIsloading(false))
+        .finally(()=>setIsloading(false))
     }
   return (
     <div className="login">

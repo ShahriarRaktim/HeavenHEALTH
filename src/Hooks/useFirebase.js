@@ -46,7 +46,7 @@ const useFirebase = () => {
       setUser({});
       setIsloading(false)
     })
-   .finaly(()=>setIsloading(false))
+   .finally(()=>setIsloading(false))
   };
 
   useEffect(() => {
