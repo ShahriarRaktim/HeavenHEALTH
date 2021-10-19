@@ -6,7 +6,7 @@ import {
   signOut,
   onAuthStateChanged,
   createUserWithEmailAndPassword,
-  signInWithEmailAndPassword
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 import firebaseInitializeApp from "../Firebase/firebase.init";
 
@@ -16,41 +16,23 @@ const useFirebase = () => {
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
 
-  const register=(email, password)=>{
+  const register = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-      // Signed in 
       const user = userCredential.user;
-      console.log("register", user)
-      // ...
     })
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log("error kele", errorMessage)
-      // ..
     });
   };
 
-  const logIn =(email, password)=>{
-    signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      // Signed in 
-      const user = userCredential.user;
-      // ...
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-    });
-  }
-
-
+  const logIn = (email, password) => {
+    return signInWithEmailAndPassword(auth, email, password);
+  };
 
   const googleSignIn = () => {
-    signInWithPopup(auth, googleProvider).then((result) => {
-      setUser(result.user);
-    });
+    return signInWithPopup(auth, googleProvider);
   };
   const logOut = () => {
     signOut(auth).then(() => {
@@ -61,22 +43,21 @@ const useFirebase = () => {
   useEffect(() => {
     const unsubscriber = onAuthStateChanged(auth, (user) => {
       if (user) {
-        setUser(user)
-      } 
-      else {
-        setUser({})
+        setUser(user);
+      } else {
+        setUser({});
       }
     });
-    return ()=> unsubscriber;
+    return () => unsubscriber;
   }, []);
 
-  return{
-      googleSignIn,
-      logOut,
-      register,
-      logIn,
-      user
-  }
+  return {
+    googleSignIn,
+    logOut,
+    register,
+    logIn,
+    user,
+  };
 };
 
 export default useFirebase;
