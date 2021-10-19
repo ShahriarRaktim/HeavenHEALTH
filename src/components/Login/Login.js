@@ -1,19 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import "./Login.css";
 
 const Login = () => {
-    const {googleSignIn} = useAuth();
+    const {googleSignIn, logIn} = useAuth();
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const handleUserEmail=(e)=>{
+      setEmail(e.target.value)  
+    }
+    const handleUserPassword=(e)=>{
+        setPassword(e.target.value)
+    }
+    const handleLogIn=(e)=>{
+      logIn(email, password)
+      e.preventDefault();
+    }
   return (
     <div className="login">
       <div className="login-form">
         <h1>Please Login</h1>
-        <form action="">
+        <form onSubmit={handleLogIn}>
           <div className="input">
-            <input type="email" name="" id="" placeholder="Enter Your Email" />
+            <input type="email" name="" onBlur={handleUserEmail} placeholder="Enter Your Email" />
             <br />
-            <input type="password" name="" id="" placeholder="Enter Your Password"/>
+            <input type="password" name="" onBlur={handleUserPassword} placeholder="Enter Your Password"/>
           </div>
 
           <input className="login-btn" type="submit" value="Login" />

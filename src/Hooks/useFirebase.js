@@ -5,6 +5,8 @@ import {
   GoogleAuthProvider,
   signOut,
   onAuthStateChanged,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword
 } from "firebase/auth";
 import firebaseInitializeApp from "../Firebase/firebase.init";
 
@@ -13,6 +15,38 @@ const useFirebase = () => {
   const [user, setUser] = useState({});
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
+
+  const register=(email, password)=>{
+    createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      console.log("register", user)
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log("error kele", errorMessage)
+      // ..
+    });
+  };
+
+  const logIn =(email, password)=>{
+    signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      // Signed in 
+      const user = userCredential.user;
+      // ...
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
+  }
+
+
+
   const googleSignIn = () => {
     signInWithPopup(auth, googleProvider).then((result) => {
       setUser(result.user);
@@ -39,6 +73,8 @@ const useFirebase = () => {
   return{
       googleSignIn,
       logOut,
+      register,
+      logIn,
       user
   }
 };

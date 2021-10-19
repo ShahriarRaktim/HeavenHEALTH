@@ -1,0 +1,6 @@
+.main-services{
+    display: flex;
+}
+.services img{
+    width: 50%;
+}
