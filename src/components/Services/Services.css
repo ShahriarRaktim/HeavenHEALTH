@@ -1,6 +1,37 @@
 .main-services{
     display: flex;
+    justify-content: space-around;
 }
-.services img{
+.main-services img{
     width: 50%;
+}
+.service-banar h1{
+    font-size: 70px;
+    font-weight: 900;
+    color: rgb(10, 10, 70);
+    padding-bottom: 20px;
+    padding: 10%;
+    background-color: rgba(12, 241, 241, 0.479);
+}
+.service-banar span {
+    color: rgba(53, 9, 9, 0.705);
+    font-size: 82px;
+}
+
+@media only screen and (max-width: 679px){
+    .main-services{
+        display: block; 
+    }
+    .service-banar h1{
+        font-size: 20px;
+        font-weight: 900;
+        padding: 5% 25% 5% 10%;
+    }
+    .service-banar span {
+        color: rgb(42, 162, 218);
+        font-size: 32px;
+    }  
+    .main-services img{
+        width: 100%;
+    }
 }
