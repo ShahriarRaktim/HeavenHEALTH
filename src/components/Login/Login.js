@@ -4,7 +4,7 @@ import useAuth from "../../Hooks/useAuth";
 import "./Login.css";
 
 const Login = () => {
-    const {googleSignIn, logIn} = useAuth();
+    const {googleSignIn, logIn, setIsloading} = useAuth();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const location = useLocation();
@@ -21,10 +21,10 @@ const Login = () => {
       logIn(email, password)
       .then((userCredential) => {
         history.push(from)
+        
       })
-      .catch((error) => {
-        const errorMessage = error.message;
-      });
+      .finaly(()=>setIsloading(false))
+      
       e.preventDefault();
     }
 
@@ -32,7 +32,9 @@ const Login = () => {
         googleSignIn()
         .then((result) => {
           history.push(from)
-        });
+          setIsloading(false)
+        })
+        .finaly(()=>setIsloading(false))
     }
   return (
     <div className="login">

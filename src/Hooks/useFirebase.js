@@ -13,13 +13,16 @@ import firebaseInitializeApp from "../Firebase/firebase.init";
 firebaseInitializeApp();
 const useFirebase = () => {
   const [user, setUser] = useState({});
+  const [isloading, setIsloading] = useState(true)
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
 
   const register = (email, password) => {
+    setIsloading(true)
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential.user;
+      setIsloading(false)
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -28,25 +31,33 @@ const useFirebase = () => {
   };
 
   const logIn = (email, password) => {
+    setIsloading(true)
     return signInWithEmailAndPassword(auth, email, password);
   };
 
   const googleSignIn = () => {
+    setIsloading(true)
     return signInWithPopup(auth, googleProvider);
   };
   const logOut = () => {
-    signOut(auth).then(() => {
+    setIsloading(true)
+    signOut(auth)
+    .then(() => {
       setUser({});
-    });
+      setIsloading(false)
+    })
+   .finaly(()=>setIsloading(false))
   };
 
   useEffect(() => {
+    setIsloading(true)
     const unsubscriber = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUser(user);
       } else {
         setUser({});
       }
+      setIsloading(false)
     });
     return () => unsubscriber;
   }, []);
@@ -57,6 +68,8 @@ const useFirebase = () => {
     register,
     logIn,
     user,
+    setIsloading,
+    isloading
   };
 };
 

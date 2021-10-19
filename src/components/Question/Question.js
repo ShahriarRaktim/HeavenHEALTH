@@ -40,7 +40,7 @@ const Question = () => {
         ) : (
           <>
             <h1 className="mb-5">You will get Your answer very soon!</h1>
-            <NavLink to="/ourdoctors" className="about">
+            <NavLink to="/home" className="about">
               Back Home <i class="fas fa-arrow-alt-circle-right"></i>
             </NavLink>
           </>

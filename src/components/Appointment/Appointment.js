@@ -41,7 +41,7 @@ const Appointment = () => {
         ) : (
           <>
             <h1 className="mb-5">Thank You for Taking an Appointment!</h1>
-            <NavLink to="/ourdoctors" className="about">
+            <NavLink to="/home" className="about">
               Back Home <i class="fas fa-arrow-alt-circle-right"></i>
             </NavLink>
           </>
