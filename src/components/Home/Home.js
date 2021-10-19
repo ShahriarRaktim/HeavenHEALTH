@@ -78,7 +78,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <NavLink to="/contact" className="contact">
+          <NavLink to="/ourdoctors" className="contact">
             Contact Us <i class="fas fa-arrow-alt-circle-right"></i>
           </NavLink>
         </div>
