@@ -5,7 +5,7 @@ import './Servicedetails.css';
 
 const Servicedetails = ({ service }) => {
   return (
-    <Card className="my-5 mx-auto card">
+    <Card className="my-5 mx-auto card service-details-card">
       <Card.Img variant="top" src={service?.img} />
       <Card.Body>
         <Card.Title className="name">{service?.name}</Card.Title>
