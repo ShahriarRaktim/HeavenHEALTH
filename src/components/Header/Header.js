@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const Header = () => {
-  const {user, logOut} = useAuth();
-  console.log(user)
+  const { user, logOut } = useAuth();
+  console.log(user);
   return (
     <div>
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -23,28 +23,49 @@ const Header = () => {
                 SERVICES
               </Nav.Link>
               <NavDropdown title="PAGES" id="navbarScrollingDropdown">
-                <NavDropdown.Item as={NavLink} to="/ourdoctors" className="text-dark">OUR DOCTORS</NavDropdown.Item>
-                <NavDropdown.Item as={NavLink} to="/appointment" className="text-dark">APPOINTMENT</NavDropdown.Item>
-                <NavDropdown.Item as={NavLink} to="/help" className="text-dark">HELP & FAQ </NavDropdown.Item>
+                <NavDropdown.Item
+                  as={NavLink}
+                  to="/ourdoctors"
+                  className="text-dark"
+                >
+                  OUR DOCTORS
+                </NavDropdown.Item>
+                <NavDropdown.Item
+                  as={NavLink}
+                  to="/appointment"
+                  className="text-dark"
+                >
+                  APPOINTMENT
+                </NavDropdown.Item>
+                <NavDropdown.Item as={NavLink} to="/help" className="text-dark">
+                  HELP & FAQ{" "}
+                </NavDropdown.Item>
               </NavDropdown>
               <Nav.Link as={NavLink} to="/contact" className="text-white">
                 CONTACT
               </Nav.Link>
             </Nav>
-            
+
             <Nav>
-              {
-                user.email ? <>
-                <Nav.Link href="#user" className="text-info">{user.displayName}</Nav.Link>
-                <Nav.Link as={NavLink} to="/logout" className="text-info" onClick={logOut}>
-                  LOGOUT
-                </Nav.Link></>
-                :
+              {user.email ? (
+                <>
+                  <Nav.Link href="#user" className="text-info">
+                    {user.displayName}
+                  </Nav.Link>
+                  <Nav.Link
+                    as={NavLink}
+                    to="/home"
+                    className="text-info"
+                    onClick={logOut}
+                  >
+                    LOGOUT
+                  </Nav.Link>
+                </>
+              ) : (
                 <Nav.Link as={NavLink} to="/login" className="text-info">
-                LOGIN
-              </Nav.Link>
-              }
-              
+                  LOGIN
+                </Nav.Link>
+              )}
             </Nav>
           </Navbar.Collapse>
         </Container>

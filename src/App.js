@@ -6,7 +6,6 @@ import Header from "./components/Header/Header";
 import Notfound from "./components/Notfound/Notfound";
 import Services from "./components/Services/Services";
 import Login from "./components/Login/Login";
-import Logout from "./components/Logout/Logout";
 import Service from "./components/Service/Service";
 import Contact from "./components/Contact/Contact";
 import Appointment from "./components/Appointment/Appointment";
@@ -37,9 +36,6 @@ function App() {
             </Route>
             <Route path="/login">
               <Login></Login>
-            </Route>
-            <Route path="/logout">
-              <Logout></Logout>
             </Route>
             <Route path="/service">
               <Service></Service>
