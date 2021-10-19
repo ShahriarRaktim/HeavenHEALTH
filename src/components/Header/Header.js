@@ -30,19 +30,12 @@ const Header = () => {
                 >
                   OUR DOCTORS
                 </NavDropdown.Item>
-                <NavDropdown.Item
-                  as={NavLink}
-                  to="/appointment"
-                  className="text-dark"
-                >
-                  APPOINTMENT
-                </NavDropdown.Item>
-                <NavDropdown.Item as={NavLink} to="/help" className="text-dark">
+                <NavDropdown.Item as={NavLink} to="/question" className="text-dark">
                   HELP & FAQ{" "}
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link as={NavLink} to="/contact" className="text-white">
-                CONTACT
+              <Nav.Link as={NavLink} to="/appointment" className="text-white">
+                APPOINTMENT
               </Nav.Link>
             </Nav>
 

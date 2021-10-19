@@ -9,7 +9,6 @@ import Login from "./components/Login/Login";
 import Service from "./components/Service/Service";
 import Contact from "./components/Contact/Contact";
 import Appointment from "./components/Appointment/Appointment";
-import Help from "./components/Help/Help";
 import Ourdoctors from "./components/Ourdoctors/Ourdoctors";
 import AuthProvider from "./Context/AuthProvider";
 import Register from "./components/Register/Register";
@@ -17,6 +16,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Details from "./components/Details/Details";
 import Servicedetails from "./components/Servicedetails/Servicedetails";
 import Footer from "./components/Footer/Footer";
+import Question from "./components/Question/Question";
 
 function App() {
   return (
@@ -43,8 +43,8 @@ function App() {
             <PrivateRoute path="/appointment">
               <Appointment></Appointment>
             </PrivateRoute>
-            <PrivateRoute path="/help">
-              <Help></Help>
+            <PrivateRoute path="/question">
+                <Question></Question>
             </PrivateRoute>
             <PrivateRoute path="/ourdoctors">
               <Ourdoctors></Ourdoctors>
