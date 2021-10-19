@@ -1,0 +1,17 @@
+.doctors{
+    margin-bottom: 6%;
+}
+.doctors h1{
+    color: turquoise;
+    font-size: 20px;
+    font-weight: 600;
+}
+.doctors h2{
+    font-size: 40px;
+    font-weight: 800;
+    color: rgb(10, 10, 70);
+}
+.doctors p{
+    padding: 0 25%;
+    color: rgba(47, 47, 75, 0.712);
+}

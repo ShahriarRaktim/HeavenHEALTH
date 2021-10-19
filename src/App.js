@@ -40,7 +40,7 @@ function App() {
             <Route path="/service">
               <Service></Service>
             </Route>
-            <PrivateRoute path="/appoinment">
+            <PrivateRoute path="/appointment">
               <Appointment></Appointment>
             </PrivateRoute>
             <PrivateRoute path="/help">

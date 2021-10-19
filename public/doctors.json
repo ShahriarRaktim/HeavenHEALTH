@@ -1,0 +1,31 @@
+[
+    
+    {
+        "id": "1",
+        "name": "Tom Helly",
+        "summary": "Hi! I am Tom.Primary eye care is the provision of appropriate, accessible, and affordable care that meets patients' eye care needs in a comprehensive and competent manner. Primary eye care provides the patient with the first.",
+        
+        "img": "https://i.ibb.co/6gMntqg/cheerful-doctor-gesturing-thumb-up-min.jpg"
+    },
+    {
+        "id": "2",
+        "name": "Cristian Smai",
+        "summary": "Hey ! I am Smai.During the first wave of the COVID-19 pandemic, many doctors’ offices were closed, so there was little choice but to delay non-urgent medical appointments. But as it became clear the pandemic would continue.",
+        
+        "img": "https://i.ibb.co/HBMwG3j/doctor-standing-hospital-premises-min.jpg"
+    },
+    {
+        "id": "3",
+        "name": "Abu Sufian",
+        "summary": "Hello ! I am Sufiun.Surgery is a medical or dental specialty that uses operative manual and instrumental techniques on a person to investigate or treat a pathological condition such as a disease or injury, to help improve.",
+        
+        "img": "https://i.ibb.co/N3gwsPM/hospital-healthcare-workers-covid-19-treatment-concept-young-doctor-scrubs-making-daily-errands-clin.jpg"
+    },
+    {
+        "id": "4",
+        "name": "Kelvin Patul",
+        "summary": "Hi ! I am Kelvin.The Need to Address Safe Spaces, Stigma, and Severity of the Disease Became Our Platform. Walt's Waltz Is a Compass & A Megaphone for Mental Health Support, Education, & Change. Become More Mindful Mindful.",
+        
+        "img": "https://i.ibb.co/wcktpDP/portrait-smiling-handsome-male-doctor-man-min.jpg"
+    }
+]
