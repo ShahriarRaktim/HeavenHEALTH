@@ -37,8 +37,10 @@ const Register = () => {
         {!user.email ? (
           <>
             <h1>Please Register</h1>
-            <h5 className="text-danger">{regerror}</h5>
-            <h5 className="text-danger" >{error}</h5>
+            {
+              error && <h5 className="text-danger" >{error}</h5>
+            }
+            
             <form onSubmit={handleCreateAccount}>
               <div className="input">
                 <input

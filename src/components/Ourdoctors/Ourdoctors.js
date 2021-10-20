@@ -19,7 +19,7 @@ const Ourdoctors = () => {
         <h2>Some of our BEST Doctors</h2>
         <p>As you continue to keep tabs on the HeavenHEALTH industry</p>
         </div>
-      <Row xs={1} md={2} lg={3} className="g-4">
+      <Row xs={1} md={2} lg={3} className="m-0 pb-5 g-4">
         {doctors.map((doctor) => (
           <Doctor doctor={doctor}></Doctor>
         ))}

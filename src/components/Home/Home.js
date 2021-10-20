@@ -94,7 +94,7 @@ const Home = () => {
             been feeling to propel your career forward.
           </p>
         </div>
-        <Row xs={1} md={2} lg={3} className="g-4">
+        <Row xs={1} md={2} lg={3} className="m-0 g-4">
           {services.map((service) => (
             <Homeservice key={service.id} service={service}></Homeservice>
           ))}
