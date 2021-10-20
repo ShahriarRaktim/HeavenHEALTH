@@ -14,10 +14,10 @@ firebaseInitializeApp();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [isloading, setIsloading] = useState(true);
-  const [regerror, setRegerror] = useState("");
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
 
+                  /* Create Account */
   const register = (email, password) => {
     setIsloading(true)
     createUserWithEmailAndPassword(auth, email, password)
@@ -26,19 +26,20 @@ const useFirebase = () => {
       setIsloading(false)
     })
     .catch((error) => {
-      setRegerror(error.code)
+      console.log(error.message)
     });
   };
-
+                  /* Log In */
   const logIn = (email, password) => {
     setIsloading(true)
     return signInWithEmailAndPassword(auth, email, password);
   };
-
+                  /* Google Sign In */
   const googleSignIn = () => {
     setIsloading(true)
     return signInWithPopup(auth, googleProvider);
   };
+                /* Log Out */
   const logOut = () => {
     setIsloading(true)
     signOut(auth)
@@ -48,7 +49,7 @@ const useFirebase = () => {
     })
    .finally(()=>setIsloading(false))
   };
-
+                  /* State Change */
   useEffect(() => {
     setIsloading(true)
     const unsubscriber = onAuthStateChanged(auth, (user) => {
@@ -69,8 +70,7 @@ const useFirebase = () => {
     logIn,
     user,
     setIsloading,
-    isloading,
-    regerror
+    isloading
   };
 };
 

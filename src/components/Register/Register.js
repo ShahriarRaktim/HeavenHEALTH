@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const Register = () => {
-  const { googleSignIn, register, user, regerror } = useAuth();
+  const { googleSignIn, register, user} = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("")

@@ -14,6 +14,7 @@ const Home = () => {
   }, []);
   return (
     <>
+                            {/* Banar Section */}
       <section className="banar">
         <h1>
           <span>BEST</span> Medical & Healthcare Service For Your Family
@@ -22,6 +23,7 @@ const Home = () => {
           About Us <i class="fas fa-arrow-alt-circle-right"></i>
         </NavLink>
       </section>
+                            {/* Second Section */}
       <section className="doc-team">
         <div>
           <img src={docTeam} alt="" />
@@ -83,7 +85,7 @@ const Home = () => {
           </NavLink>
         </div>
       </section>
-
+                            {/* Service Section */}
       <section>
         <div className="services">
           <h1>Medical Service</h1>
@@ -100,6 +102,7 @@ const Home = () => {
           ))}
         </Row>
       </section>
+                             {/* Review Section */}
       <section>
         <div className="services">
           <h1>Review</h1>

@@ -8,7 +8,8 @@ const Header = () => {
   console.log(user);
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top" >
+                          {/* NAVBAR */}
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
         <Container>
           <Navbar.Brand as={NavLink} to="/home" style={{ color: "aqua" }}>
             HeavenHEALTH
@@ -30,7 +31,11 @@ const Header = () => {
                 >
                   OUR DOCTORS
                 </NavDropdown.Item>
-                <NavDropdown.Item as={NavLink} to="/question" className="text-dark">
+                <NavDropdown.Item
+                  as={NavLink}
+                  to="/question"
+                  className="text-dark"
+                >
                   HELP & FAQ{" "}
                 </NavDropdown.Item>
               </NavDropdown>
@@ -38,14 +43,12 @@ const Header = () => {
                 APPOINTMENT
               </Nav.Link>
             </Nav>
-
+                        {/* Conditional username and logout nav */}
             <Nav>
               {user.email ? (
                 <>
                   <Nav.Link href="#user" className="text-info">
-                      {
-                        user.displayName || user.email
-                      }
+                    {user.displayName || user.email}
                   </Nav.Link>
                   <Nav.Link
                     as={NavLink}

@@ -7,7 +7,6 @@ import Notfound from "./components/Notfound/Notfound";
 import Services from "./components/Services/Services";
 import Login from "./components/Login/Login";
 import Service from "./components/Service/Service";
-import Contact from "./components/Contact/Contact";
 import Appointment from "./components/Appointment/Appointment";
 import Ourdoctors from "./components/Ourdoctors/Ourdoctors";
 import AuthProvider from "./Context/AuthProvider";
@@ -55,9 +54,6 @@ function App() {
             <PrivateRoute path="/servicedetails">
               <Servicedetails></Servicedetails>
             </PrivateRoute>
-            <Route path="/contact">
-              <Contact></Contact>
-            </Route>
             <Route path="/register">
               <Register></Register>
             </Route>
