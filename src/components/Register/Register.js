@@ -7,18 +7,28 @@ const Register = () => {
   const { googleSignIn, register, user, regerror } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("")
 
   const handleUserEmail = (e) => {
     setEmail(e.target.value);
   };
 
   const handleUserPassword = (e) => {
-    setPassword(e.target.value);
+    const regix = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{8,20}$/;
+    if(!regix.test(e.target.value) ){
+      setError("Sir ! You have to use at least 8 characters with at least one uppercase, one lowercase, one digit, one spcial character in your password but not more than 20 characters");
+    }
+    else{
+      setPassword(e.target.value);
+    }
+    
   };
+  
 
   const handleCreateAccount = (e) => {
     register(email, password);
     e.preventDefault();
+    console.log('ok', error)
   };
 
   return (
@@ -27,7 +37,8 @@ const Register = () => {
         {!user.email ? (
           <>
             <h1>Please Register</h1>
-            <h2 className="text-danger">{regerror}</h2>
+            <h5 className="text-danger">{regerror}</h5>
+            <h5 className="text-danger" >{error}</h5>
             <form onSubmit={handleCreateAccount}>
               <div className="input">
                 <input
