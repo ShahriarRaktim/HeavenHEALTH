@@ -12,7 +12,7 @@ const Question = () => {
   };
     return (
         <div>
-      <img className="w-50" src={faq} alt="" />
+      <img className="w-50 pt-5" src={faq} alt="" />
       <div className="login-form">
         {!final ? (
           <>

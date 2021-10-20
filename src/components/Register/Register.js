@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const Register = () => {
-  const { googleSignIn, register, user } = useAuth();
+  const { googleSignIn, register, user, regerror } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -27,6 +27,7 @@ const Register = () => {
         {!user.email ? (
           <>
             <h1>Please Register</h1>
+            <h2 className="text-danger">{regerror}</h2>
             <form onSubmit={handleCreateAccount}>
               <div className="input">
                 <input
@@ -60,7 +61,7 @@ const Register = () => {
           </>
         ) : (
           <>
-            <h1 className='success'>Successfully Registerded !</h1>
+            <h1 className="success">Successfully Registerded !</h1>
             <NavLink to="/home" className="about">
               Explore Us <i class="fas fa-arrow-alt-circle-right"></i>
             </NavLink>

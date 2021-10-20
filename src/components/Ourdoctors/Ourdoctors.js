@@ -13,7 +13,7 @@ const Ourdoctors = () => {
   }, []);
   return (
     <div>
-        <img className="w-50" src={doctor} alt="" />
+        <img className="w-50 pt-5" src={doctor} alt="" />
         <div className="doctors">
             <h1>HeavenHEALTH Doctors</h1>
         <h2>Some of our BEST Doctors</h2>

@@ -13,7 +13,8 @@ import firebaseInitializeApp from "../Firebase/firebase.init";
 firebaseInitializeApp();
 const useFirebase = () => {
   const [user, setUser] = useState({});
-  const [isloading, setIsloading] = useState(true)
+  const [isloading, setIsloading] = useState(true);
+  const [regerror, setRegerror] = useState("");
   const auth = getAuth();
   const googleProvider = new GoogleAuthProvider();
 
@@ -25,8 +26,7 @@ const useFirebase = () => {
       setIsloading(false)
     })
     .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
+      setRegerror(error.code)
     });
   };
 
@@ -69,7 +69,8 @@ const useFirebase = () => {
     logIn,
     user,
     setIsloading,
-    isloading
+    isloading,
+    regerror
   };
 };
 

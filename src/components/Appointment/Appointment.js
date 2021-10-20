@@ -12,7 +12,7 @@ const Appointment = () => {
   };
   return (
     <div>
-      <img className="w-50" src={pic} alt="" />
+      <img className="w-50 pt-5" src={pic} alt="" />
       <div className="login-form">
         {!final ? (
           <>

@@ -95,11 +95,43 @@ const Home = () => {
           </p>
         </div>
         <Row xs={1} md={2} lg={3} className="g-4">
-          {services.map((service) => <Homeservice
-          key={service.id}
-          service={service}
-          ></Homeservice>)}
+          {services.map((service) => (
+            <Homeservice key={service.id} service={service}></Homeservice>
+          ))}
         </Row>
+      </section>
+      <section>
+        <div className="services">
+          <h1>Review</h1>
+          <h2>Our Peace Here </h2>
+        </div>
+       <div className="review">
+       <img
+          src="https://i.ibb.co/kGqFFKV/genuine-human-facial-expressions-feelings-reaction-good-looking-stylish-retired-man-glasses-shirt-ha.jpg"
+          alt=""
+        />
+        <p>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </p>
+
+        <h4>
+          I am Devid.I am so happy to get their service.Time is the continued
+          sequence of existence and events that occurs in an apparently
+          irreversible succession from the past, through the present.Time is the
+          continued sequence of existence and events that occurs in an
+          apparently irreversible succession from the past, through the
+          present.Time is the continued sequence of existence and events that
+          occurs in an apparently irreversible succession from the past, through
+          the present
+        </h4>
+        <NavLink to="/ourdoctors" className="contact">
+            More Reviews <i class="fas fa-arrow-alt-circle-right"></i>
+          </NavLink>
+       </div>
       </section>
     </>
   );

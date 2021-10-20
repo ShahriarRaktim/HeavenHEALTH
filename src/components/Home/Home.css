@@ -98,10 +98,24 @@
     background-color: rgba(111, 206, 250, 0.829);
     cursor: zoom-out;
 }
+.review{
+    margin-bottom: 8%;
+}
+.review img{
+    width: 50%;
+    border-radius: 50%;
+}
+.review p{
+    color: gold;
+    padding: 2%;
+}
+.review h4{
+    padding: 0 20% 5% 20% ;
+}
 
 @media only screen and (max-width: 679px) {
     .banar{
-        padding: 5% 25% 5% 10%;
+        padding: 15% 25% 5% 10%;
     }
     .banar h1{
         font-size: 20px;
@@ -119,5 +133,9 @@
     }
     .services p{
         padding: 10px;
+    }
+    .review h4{
+        padding: 0 5% 2% 5%;
+        font-size: 12px;
     }
 }

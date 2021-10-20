@@ -8,7 +8,7 @@ const Header = () => {
   console.log(user);
   return (
     <div>
-      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top" >
         <Container>
           <Navbar.Brand as={NavLink} to="/home" style={{ color: "aqua" }}>
             HeavenHEALTH
