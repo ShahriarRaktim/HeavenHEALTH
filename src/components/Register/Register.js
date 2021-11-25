@@ -18,7 +18,7 @@ const Register = () => {
       /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{8,20}$/;
     if (!regix.test(e.target.value)) {
       setError(
-        "Sir, It's Weak Password ! You have to use at least 8 characters with  uppercase, lowercase, digit, spcial character in your password but not more than 20 characters.Make it more complex"
+        "Sir, It's Weak Password ! You have to use at least 8 characters with at least a uppercase, lowercase,     digit, spcial character in your password but not more than 20 characters.Make it more complex"
       );
     } else {
       setPassword(e.target.value);

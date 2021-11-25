@@ -22,6 +22,7 @@ const Login = () => {
   const handleLogIn = (e) => {
     logIn(email, password)
       .then((userCredential) => {
+        // const user = userCredential.user;
         history.push(from);
       })
       .catch((error) => {
